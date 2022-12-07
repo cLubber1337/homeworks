@@ -1,17 +1,37 @@
 .message {
-
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 .imageAndText {
+    padding: 7px 0px 7px 13px;
+    border-radius: 10px;
+    background-color: #4676D7;
+    margin-top: 24px;
+    margin-right: 10px;
+    overflow: hidden;
+    display: flex;
+
 
 }
 
-.imageAndText img {
-
+.ava {
+    width: 48px;
+    padding: 5px;
+    float: right;
+    background-color: whitesmoke;
+    display: inline-block;
+    margin-top: 25px;
+    margin-right: 70px;
 }
 
 .text {
-
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    padding: 0;
 }
 
 .text:after {
@@ -19,13 +39,42 @@
 }
 
 .name {
-
+    color: white;
+    display: inline-block;
+    padding-right: 8px;
+    font-family: 'Montserrat', monospace;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
 }
 
 .messageText {
-
+    padding: 5px;
+    color: white;
+    word-break: break-all;
+    font-family: 'Montserrat', monospace;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .time {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    align-self: flex-end;
+    margin-right: 81px;
+    margin-top: 5px;
 
+}
+
+.avaTime {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: normal;
 }
