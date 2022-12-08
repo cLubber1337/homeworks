@@ -2,36 +2,33 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    align-items: flex-start;
 }
 
 .imageAndText {
-    padding: 7px 0px 7px 13px;
-    border-radius: 10px;
-    background-color: #4676D7;
-    margin-top: 24px;
-    margin-right: 10px;
-    overflow: hidden;
+    margin-top: 30px;
     display: flex;
-
-
 }
-
 .ava {
     width: 48px;
     padding: 5px;
     float: right;
     background-color: whitesmoke;
     display: inline-block;
-    margin-top: 25px;
+    margin-top: 38px;
     margin-right: 70px;
 }
 
 .text {
+    background-color: #4676D7;
     text-align: right;
     display: flex;
     flex-direction: column;
-    margin-right: 20px;
     padding: 0;
+    border-radius: 20px;
+    margin-right: 10px;
+    box-shadow: 0px 5px 20px rgba(29, 33, 38, 0.03), 0px 1px 2px rgba(29, 33, 38, 0.1);
+    align-self: flex-end;
 }
 
 .text:after {
@@ -41,7 +38,8 @@
 .name {
     color: white;
     display: inline-block;
-    padding-right: 8px;
+    padding-top: 7px;
+    padding-right: 16px;
     font-family: 'Montserrat', monospace;
     font-style: normal;
     font-weight: 600;
@@ -50,7 +48,7 @@
 }
 
 .messageText {
-    padding: 5px;
+    padding: 3px 13px 8px 13px;
     color: white;
     word-break: break-all;
     font-family: 'Montserrat', monospace;
@@ -59,6 +57,7 @@
     font-size: 16px;
     line-height: 20px;
 }
+
 
 .time {
     display: flex;
