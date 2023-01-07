@@ -1,5 +1,9 @@
 .App {
     --header_height: 60px;
+    margin: 0 auto;
+    width: 1280px;
+    display: flex;
+
 }
 
 .hw {
@@ -7,11 +11,15 @@
     flex-direction: column;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     background-color: whitesmoke;
-    margin: 0 auto;
-    width: 1280px;
-
 }
 
 .hwTitle {
-font-size: xxx-large;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Montserrat', serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 17px 70px 14px;
 }

@@ -1,16 +1,25 @@
 .sidebar {
+    display: flex;
+    flex-direction: column
+
 }
 
 .sidebar.open {
+    display: flex;
 }
 
 .background {
+    background-color: yellow;
 }
 
 .nav {
+    background-color: yellow;
+    display: flex;
+    flex-direction: column
 }
 
 .nav a {
+    background-color: yellow;
 }
 
 .nav a:hover {
