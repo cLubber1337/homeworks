@@ -46,7 +46,10 @@
 }
 
 .options {
-
+    display: flex;
+    flex-direction: column;
+    padding-left: 127px;
+    padding-top: 4px;
 }
 
 .span {
