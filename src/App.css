@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  --header_height: 60px;
 }
 
 .App-logo {

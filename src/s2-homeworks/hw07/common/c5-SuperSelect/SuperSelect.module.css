@@ -1,8 +1,12 @@
 .select {
+    color: black;
+    background-color: white;
 }
 
 .select:focus {
+
 }
+
 
 
 .option:hover {

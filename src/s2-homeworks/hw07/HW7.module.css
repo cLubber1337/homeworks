@@ -1,2 +1,29 @@
 .container {
+    display: flex;
+
+}
+
+.selector {
+    padding-right: 123px;
+
+}
+
+.selectorItem {
+    width: 165px;
+    height: 24px;
+    padding-top: 2px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    border: 1px solid #C2C2C2;
+    border-radius: 2px;
+}
+
+.radio {
+    display: flex;
+
+}
+
+.radioItem {
+    display: flex;
+    flex-direction: column;
 }
