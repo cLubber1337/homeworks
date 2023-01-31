@@ -1,23 +1,43 @@
 .item {
+    font-family: Roboto sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+
 }
 
 .item:last-of-type {
 }
 
 .users {
+    font-family: Roboto sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+
 }
 
 .buttonsContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 18px;
 }
 
 .container {
+    width: 606px;
 }
 
 .thead {
+    
 }
 
 .nameCol {
+
 }
 
 .ageCol {
+    padding-left: 218px;
 }
