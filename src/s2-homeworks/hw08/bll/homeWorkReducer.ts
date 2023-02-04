@@ -9,17 +9,18 @@ export const homeWorkReducer = (state: UserType[], action: ActionType): UserType
         case 'sort': {
             switch (action.payload) {
                 case "up":
-                    return state.sort((a, b) => (a.name > b.name ? 1 : -1))
+                    return [...state].sort((a, b) => (a.name > b.name ? 1 : -1))
                 case "down":
-                    return state.sort((a, b) => (a.name < b.name ? 1 : -1))
+                    return [...state].sort((a, b) => (a.name < b.name ? 1 : -1))
                 default:
                     return state
             }
         }
         case 'check': {
-            return state.filter(age=> age.age >= 18)
+            return [...state].filter(age=> age.age >= 18)
         }
         default:
             return state
     }
 }
+//[ 55, 40, 44, 66 ] to deeply equal [ 66, 44, 40, 55 ]
