@@ -11,34 +11,28 @@ function Clock() {
     const [show, setShow] = useState<boolean>(false)
 
     const start = () => {
-        setInterval(()=>{
             setTimerId(+setInterval(() => setDate(new Date()), 1000))
-        },1000)
     }
     const stop = () => {
         clearInterval(timerId)
         setTimerId(undefined)
-
+        console.log(timerId)
     }
 
     const onMouseEnter = () => setShow(true)
-
     const onMouseLeave = () => setShow(false)
-
 
     let getTime = new Intl.DateTimeFormat("ru", {
         hour: "numeric",
         minute: "numeric",
         second: "numeric",
     });
-    const stringTime = getTime.format(date)  || <br/>// часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут
-
+    const stringTime = getTime.format(date) || <br/>// часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут
 
     let getMonth = new Intl.DateTimeFormat("eng", {
         month: "long",
     });
     const stringMonth = getMonth.format(date) || <br/> // пишут студенты
-
 
     let getDate = new Intl.DateTimeFormat("ru");
 
