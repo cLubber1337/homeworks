@@ -26,6 +26,7 @@ const getTechs = (params: any): Promise<any> => {
         .get<{ techs: TechType[], totalCount: number }>(
             'https://samurai.it-incubator.io/api/3.0/homework/test3',
             {params}
+
         )
         .catch((e) => {
             alert(e.response?.data?.errorText || e.message)
@@ -51,26 +52,35 @@ const HW15 = () => {
             })
     }
     const onChangePagination = (newPage: number, newCount: number) => {
-        // делает студент
         setPage(newPage)
-
         setCount(newCount)
-
         sendQuery({page: newPage, count: newCount})
-
         setSearchParams({page: newPage.toString(), count: newCount.toString()})
 
+        // const pageQuery: { page?: string } = newPage !== 1 ? {page: newPage + ''} : {}
+        // const countQuery: { count?: string } = newCount !== 4 ? {count: newCount + ''} : {}
+        // const {count, page, ...lastQueries} = Object.fromEntries(searchParams)
+        //
+        // const allQuery = {...lastQueries, ...pageQuery, ...countQuery}
+        // sendQuery(allQuery)
+        // setSearchParams(allQuery)
     }
 
     const onChangeSort = (newSort: string) => {
-        // делает студент
-        setSort( newSort )
-        setPage(1) // при сортировке сбрасывать на 1 страницу
 
+
+        setSort(newSort)
+        setPage(1) // при сортировке сбрасывать на 1 страницу
         sendQuery( {sort: newSort, page: page.toString(), count: count.toString()} )
         setSearchParams( {sort: newSort, page: page.toString(), count: count.toString()} )
 
+        // const sortQuery: { sort?: string } = newSort !== '' ? {sort: newSort} : {}
+        // const {sort, page, ...lastQueries} = Object.fromEntries(searchParams)
         //
+        // const allQuery = {...lastQueries, ...sortQuery}
+        // sendQuery(allQuery)
+        // setSearchParams(allQuery)
+
     }
 
     useEffect(() => {
@@ -78,7 +88,9 @@ const HW15 = () => {
         sendQuery({page: params.page, count: params.count})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
-    }, [])
+    }, [searchParams])
+
+    techs.forEach(t=> console.log(t.id))
 
     const mappedTechs = techs.map(t => (
         <div key={t.id} className={s.row}>

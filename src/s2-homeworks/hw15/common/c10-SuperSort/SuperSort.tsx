@@ -7,7 +7,7 @@ import none from "./../assets/svg/none.svg"
 // добавить в проект иконки и импортировать
 const downIcon = down
 const upIcon = up
-const noneIcon =  none
+const noneIcon = none
 
 
 export type SuperSortPropsType = {
@@ -18,16 +18,7 @@ export type SuperSortPropsType = {
 }
 
 export const pureChange = (sort: string, down: string, up: string) => {
-    if (sort === "" ) {
-        return up
-    }
-    if (sort[0] === "0") {
-        return down
-    } else {
-        return ""
-    }
-    // пишет студент, sort: (click) => down (click) => up (click) => '' (click) => down ...
-
+    return sort === down ? up : sort === up ? '' : down
 }
 
 const SuperSort: React.FC<SuperSortPropsType> = (
