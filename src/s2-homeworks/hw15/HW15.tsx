@@ -88,9 +88,7 @@ const HW15 = () => {
         sendQuery({page: params.page, count: params.count})
         setPage(+params.page || 1)
         setCount(+params.count || 4)
-    }, [searchParams])
-
-    techs.forEach(t=> console.log(t.id))
+    }, [])
 
     const mappedTechs = techs.map(t => (
         <div key={t.id} className={s.row}>
